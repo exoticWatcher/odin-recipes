@@ -40,10 +40,8 @@ li{
 }
 
 .hero-img{
-  height: 60vh;
-  width: 40vw;
-  min-height: 600px;
-  min-width: 400px;
+  height: clamp(600px, 60vh , 96vh);
+  width: clamp(400px,40vw,95vw);
   object-fit: cover;
   display: block;
   margin: 0 auto;
@@ -80,3 +78,34 @@ li{
   height: 242px;
 }
 
+@media screen and (max-width: 780px){
+  #container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    width: 100%;
+  }
+  .hero-img{
+    max-height: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+  }
+  .recipe-description > a > img{
+    max-width: 90%;
+    height: auto;
+  }
+  #recipes-p{
+    max-width: 90%;
+
+  }
+}
+
+@media screen and (max-width: 400px){
+  #recipes-p:hover{
+    transform: translateY(-200px);
+    height: 200px;
+  }
+}
